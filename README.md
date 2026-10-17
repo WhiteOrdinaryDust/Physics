@@ -1,6 +1,6 @@
 # Physics —— 确定性基底能否产生量子现象学
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23430061.svg)](https://doi.org/10.5281/zenodo.23430061)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23430060.svg)](https://doi.org/10.5281/zenodo.23430060)
 [![License: GPL-3.0](https://img.shields.io/badge/license-GPL--3.0-blue.svg)](LICENSE)
 
 > **一句话**：这是一个**自包含、可逐字节复现**的项目，检验的是
@@ -119,18 +119,21 @@ WORLDVIEW_REVIEW*.md  对用户世界观文档的评审
 
 ## 7. 引用
 
-若要在论文或报告里引用本工作，请用 Zenodo 的 DOI（**指向最新版**）：
+若要在论文或报告里引用本工作，请用 Zenodo 的 **全集 DOI（concept DOI，指向最新版）**：
+
+- **全集 DOI**：`10.5281/zenodo.23430060` ✓（**引用用这个** ✓，永远指向最新版 ✓）
+- **v1.0.0 版本 DOI**：`10.5281/zenodo.23430061` ✓（要精确指某一版时用 ✓）
 
 ```bibtex
 @misc{whiteordinarydust_physics,
   title   = {Physics: 确定性基底能否产生量子现象学},
   author  = {WhiteOrdinaryDust},
   year    = {2026},
-  doi     = {10.5281/zenodo.23430061},
-  url     = {https://doi.org/10.5281/zenodo.23430061},
+  doi     = {10.5281/zenodo.23430060},
+  url     = {https://doi.org/10.5281/zenodo.23430060},
   note    = {GPL-3.0; 166 scripts, 88 reports, 20 documents}
 }
 ```
 
 文本引用：WhiteOrdinaryDust, *Physics: 确定性基底能否产生量子现象学*, Zenodo,
-<https://doi.org/10.5281/zenodo.23430061> ✓
+<https://doi.org/10.5281/zenodo.23430060> ✓

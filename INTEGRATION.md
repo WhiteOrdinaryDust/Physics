@@ -1,6 +1,6 @@
 # 全面整合（第 125 轮定稿）
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23430061.svg)](https://doi.org/10.5281/zenodo.23430061) · 许可 GPL-3.0
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23430060.svg)](https://doi.org/10.5281/zenodo.23430060) · 许可 GPL-3.0
 
 > **这份文件把 125 轮、166 个脚本、88 份报告整合成一条论证链** ✓。
 > 它按**逻辑**组织，不按时间 ✓。每一句结论后面都跟着**数字 + 脚本名** ✓，可以自己复跑 ✓。
