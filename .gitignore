@@ -1,0 +1,12 @@
+# 本地临时/系统文件
+Thumbs.db
+desktop.ini
+*.log
+# 编辑器的临时文件
+*~
+*.swp
+
+# 用户的世界观原始文档（个人写作，不进公开仓库；要纳入就删掉这几行）
+_worldview*.doc
+_worldview*.docx
+_worldview*.docx

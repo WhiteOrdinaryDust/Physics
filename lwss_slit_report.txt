@@ -1,0 +1,233 @@
+=== CONTROLS ===
+  ship in vacuum: PASS period 4 velocity (2,0), 9 cells 5x4
+    connected pieces at t=0..3: 2, 1, 2, 1
+  phase 0: 9 cells, velocity (2,0), shape 5x4:.oooo/o...o/....o/o..o.
+  phase 1: 12 cells, velocity (2,0), shape 5x4:.oo../oooo./oo.oo/..oo.
+  phase 2: 9 cells, velocity (2,0), shape 5x4:o..o./....o/o...o/.oooo
+  phase 3: 12 cells, velocity (2,0), shape 5x4:..oo./oo.oo/oooo./.oo..
+  distinct shapes over the four phases: 4
+  all six walls static: PASS
+  ship far from the screen: damage 0, outgoing ship(2,0)  PASS
+  ship through a very wide opening: damage 0, outgoing ship(2,0)  PASS
+
+=== FULL RECORD ===
+X0=250 Y0=150, 9 block rows, slit = block row 4 removed.
+slit width = 2s-2.  b = vertical placement of the ship in the slit:
+  b=0   flush against the LOWER edge of the slit
+  b=max flush against the UPPER edge
+phase = which of the 4 internal arrangements of the ship is launched, all
+launched from the same bounding box so only the internal arrangement differs.
+
+thickness 1  spacing 4  slit 164..169 (width 6)  place b=0 (flush low)  mass 32
+   phase 0: out=debris5          dmg=  6 (died   4, born   2)  record 4x4:..oo/..oo/o.../.o..  rows 162..165  dy_from_slit_centre -3.3
+   phase 1: out=debris200        dmg= 49 (died  31, born  18)  record 6x34:..oo../..oo../...oo./...oo./..oo../..oo../....../....../..oo../..oo../....../....../.ooo../...o../.o..../.o..../....../....../....../....../..oo../..oo.o/o...../.o..../.ooo../o.oo../....../....../..oo../..ooo./...o.o/...o.o/..ooo./..oo..  rows 150..183  dy_from_slit_centre 1.1
+   phase 2: out=debris192        dmg= 55 (died  31, born  24)  record 6x34:..oo../..oo../...oo./...oo./..oo../..oo../....../....../..oo../..oo../....../....../..oo../oo.o../.oo.../ooo.../....../....../....../....../..oo.o/..oo.o/o....o/.o..../.ooo../o.oo../....../....../..oo../..ooo./...o.o/...o.o/..ooo./..oo..  rows 150..183  dy_from_slit_centre 1.0
+   phase 3: out=debris5          dmg=  6 (died   4, born   2)  record 4x4:..oo/..oo/o.../.o..  rows 162..165  dy_from_slit_centre -3.3
+   -> THE FOUR PHASES DIFFER   <-- PHASE-SENSITIVE
+
+thickness 1  spacing 4  slit 164..169 (width 6)  place b=1 (clear)  mass 32
+   phase 0: out=mover5 p4 v(-1,-1) dmg= 26 (died  22, born   4)  record 4x26:.oo./.oo./..../..../.oo./.oo./..../..../.oo./.oo./..../..../..../..../.oo./o..o/..../.oo./..../..../.oo./.oo./..../..../.oo./.oo.  rows 154..179  dy_from_slit_centre 0.0
+   phase 1: out=mover5 p4 v(-1,1) dmg= 26 (died  22, born   4)  record 4x26:.oo./.oo./..../..../.oo./.oo./..../..../.oo./..../o..o/.oo./..../..../..../..../.oo./.oo./..../..../.oo./.oo./..../..../.oo./.oo.  rows 154..179  dy_from_slit_centre -0.0
+   phase 2: out=mover5 p4 v(-1,1) dmg= 26 (died  22, born   4)  record 4x26:.oo./.oo./..../..../.oo./.oo./..../..../.oo./..../o..o/.oo./..../..../..../..../.oo./.oo./..../..../.oo./.oo./..../..../.oo./.oo.  rows 154..179  dy_from_slit_centre -0.0
+   phase 3: out=mover5 p4 v(-1,-1) dmg= 26 (died  22, born   4)  record 4x26:.oo./.oo./..../..../.oo./.oo./..../..../.oo./.oo./..../..../..../..../.oo./o..o/..../.oo./..../..../.oo./.oo./..../..../.oo./.oo.  rows 154..179  dy_from_slit_centre 0.0
+   -> THE FOUR PHASES DIFFER   <-- PHASE-SENSITIVE
+
+thickness 1  spacing 4  slit 164..169 (width 6)  place b=2 (flush high)  mass 32
+   phase 0: out=debris192        dmg= 55 (died  31, born  24)  record 6x34:..oo../..ooo./...o.o/...o.o/..ooo./..oo../....../....../o.oo../.ooo../.o..../o....o/..oo.o/..oo.o/....../....../....../....../ooo.../.oo.../oo.o../..oo../....../....../..oo../..oo../....../....../..oo../..oo../...oo./...oo./..oo../..oo..  rows 150..183  dy_from_slit_centre -1.0
+   phase 1: out=debris5          dmg=  6 (died   4, born   2)  record 4x4:.o../o.../..oo/..oo  rows 168..171  dy_from_slit_centre 3.3
+   phase 2: out=debris5          dmg=  6 (died   4, born   2)  record 4x4:.o../o.../..oo/..oo  rows 168..171  dy_from_slit_centre 3.3
+   phase 3: out=debris200        dmg= 49 (died  31, born  18)  record 6x34:..oo../..ooo./...o.o/...o.o/..ooo./..oo../....../....../o.oo../.ooo../.o..../o...../..oo.o/..oo../....../....../....../....../.o..../.o..../...o../.ooo../....../....../..oo../..oo../....../....../..oo../..oo../...oo./...oo./..oo../..oo..  rows 150..183  dy_from_slit_centre -1.1
+   -> THE FOUR PHASES DIFFER   <-- PHASE-SENSITIVE
+
+thickness 1  spacing 6  slit 170..179 (width 10)  place b=0 (flush low)  mass 32
+   phase 0: out=debris5          dmg=  6 (died   4, born   2)  record 4x4:..oo/..oo/o.../.o..  rows 168..171  dy_from_slit_centre -5.3
+   phase 1: out=debris3          dmg=  4 (died   4, born   0)  record 2x2:oo/oo  rows 168..169  dy_from_slit_centre -6.0
+   phase 2: out=debris3          dmg=  4 (died   4, born   0)  record 2x2:oo/oo  rows 168..169  dy_from_slit_centre -6.0
+   phase 3: out=debris5          dmg=  6 (died   4, born   2)  record 4x4:..oo/..oo/o.../.o..  rows 168..171  dy_from_slit_centre -5.3
+   -> THE FOUR PHASES DIFFER   <-- PHASE-SENSITIVE
+
+thickness 1  spacing 6  slit 170..179 (width 10)  place b=1 (clear)  mass 32
+   phase 0: out=nothing          dmg=  4 (died   4, born   0)  record 2x2:oo/oo  rows 168..169  dy_from_slit_centre -6.0
+   phase 1: out=debris16         dmg=  4 (died   4, born   0)  record 2x2:oo/oo  rows 168..169  dy_from_slit_centre -6.0
+   phase 2: out=debris16         dmg=  4 (died   4, born   0)  record 2x2:oo/oo  rows 168..169  dy_from_slit_centre -6.0
+   phase 3: out=nothing          dmg=  4 (died   4, born   0)  record 2x2:oo/oo  rows 168..169  dy_from_slit_centre -6.0
+   -> THE FOUR PHASES DIFFER   <-- PHASE-SENSITIVE
+
+thickness 1  spacing 6  slit 170..179 (width 10)  place b=2 (clear)  mass 32
+   phase 0: out=debris2          dmg=  8 (died   3, born   5)  record 4x4:..oo/.o.o/o..o/o..o  rows 168..171  dy_from_slit_centre -5.0
+   phase 1: out=ship(2,0)        dmg=  0 (died   0, born   0)  record -  rows -  dy_from_slit_centre -
+   phase 2: out=ship(2,0)        dmg=  0 (died   0, born   0)  record -  rows -  dy_from_slit_centre -
+   phase 3: out=debris2          dmg=  8 (died   3, born   5)  record 4x4:..oo/.o.o/o..o/o..o  rows 168..171  dy_from_slit_centre -5.0
+   -> THE FOUR PHASES DIFFER   <-- PHASE-SENSITIVE
+
+thickness 1  spacing 6  slit 170..179 (width 10)  place b=3 (clear)  mass 32
+   phase 0: out=ship(2,0)        dmg=  0 (died   0, born   0)  record -  rows -  dy_from_slit_centre -
+   phase 1: out=ship(2,0)        dmg=  0 (died   0, born   0)  record -  rows -  dy_from_slit_centre -
+   phase 2: out=ship(2,0)        dmg=  0 (died   0, born   0)  record -  rows -  dy_from_slit_centre -
+   phase 3: out=ship(2,0)        dmg=  0 (died   0, born   0)  record -  rows -  dy_from_slit_centre -
+   -> the four phases are indistinguishable
+
+thickness 1  spacing 6  slit 170..179 (width 10)  place b=4 (clear)  mass 32
+   phase 0: out=ship(2,0)        dmg=  0 (died   0, born   0)  record -  rows -  dy_from_slit_centre -
+   phase 1: out=debris2          dmg=  8 (died   3, born   5)  record 4x4:o..o/o..o/.o.o/..oo  rows 178..181  dy_from_slit_centre 5.0
+   phase 2: out=debris2          dmg=  8 (died   3, born   5)  record 4x4:o..o/o..o/.o.o/..oo  rows 178..181  dy_from_slit_centre 5.0
+   phase 3: out=ship(2,0)        dmg=  0 (died   0, born   0)  record -  rows -  dy_from_slit_centre -
+   -> THE FOUR PHASES DIFFER   <-- PHASE-SENSITIVE
+
+thickness 1  spacing 6  slit 170..179 (width 10)  place b=5 (clear)  mass 32
+   phase 0: out=debris16         dmg=  4 (died   4, born   0)  record 2x2:oo/oo  rows 180..181  dy_from_slit_centre 6.0
+   phase 1: out=nothing          dmg=  4 (died   4, born   0)  record 2x2:oo/oo  rows 180..181  dy_from_slit_centre 6.0
+   phase 2: out=nothing          dmg=  4 (died   4, born   0)  record 2x2:oo/oo  rows 180..181  dy_from_slit_centre 6.0
+   phase 3: out=debris16         dmg=  4 (died   4, born   0)  record 2x2:oo/oo  rows 180..181  dy_from_slit_centre 6.0
+   -> THE FOUR PHASES DIFFER   <-- PHASE-SENSITIVE
+
+thickness 1  spacing 6  slit 170..179 (width 10)  place b=6 (flush high)  mass 32
+   phase 0: out=debris3          dmg=  4 (died   4, born   0)  record 2x2:oo/oo  rows 180..181  dy_from_slit_centre 6.0
+   phase 1: out=debris5          dmg=  6 (died   4, born   2)  record 4x4:.o../o.../..oo/..oo  rows 178..181  dy_from_slit_centre 5.3
+   phase 2: out=debris5          dmg=  6 (died   4, born   2)  record 4x4:.o../o.../..oo/..oo  rows 178..181  dy_from_slit_centre 5.3
+   phase 3: out=debris3          dmg=  4 (died   4, born   0)  record 2x2:oo/oo  rows 180..181  dy_from_slit_centre 6.0
+   -> THE FOUR PHASES DIFFER   <-- PHASE-SENSITIVE
+
+thickness 2  spacing 4  slit 164..169 (width 6)  place b=0 (flush low)  mass 64
+   phase 0: out=debris5          dmg=  6 (died   4, born   2)  record 4x4:..oo/..oo/o.../.o..  rows 162..165  dy_from_slit_centre -3.3
+   phase 1: out=nothing          dmg= 12 (died  12, born   0)  record 6x10:oo..../oo..../....../....../....../....../....../....../oo..oo/oo..oo  rows 162..171  dy_from_slit_centre 1.3
+   phase 2: out=nothing          dmg= 12 (died  12, born   0)  record 6x10:oo..../oo..../....../....../....../....../....../....../oo..oo/oo..oo  rows 162..171  dy_from_slit_centre 1.3
+   phase 3: out=debris5          dmg=  6 (died   4, born   2)  record 4x4:..oo/..oo/o.../.o..  rows 162..165  dy_from_slit_centre -3.3
+   -> THE FOUR PHASES DIFFER   <-- PHASE-SENSITIVE
+
+thickness 2  spacing 4  slit 164..169 (width 6)  place b=1 (clear)  mass 64
+   phase 0: out=debris37         dmg= 40 (died  40, born   0)  record 6x22:oo..oo/oo..oo/....../....../....../....../....../....../oo..oo/oo..oo/....../....../oo..oo/oo..oo/....../....../oo..oo/oo..oo/....../....../oo..oo/oo..oo  rows 162..183  dy_from_slit_centre 7.2
+   phase 1: out=debris37         dmg= 40 (died  40, born   0)  record 6x22:oo..oo/oo..oo/....../....../oo..oo/oo..oo/....../....../oo..oo/oo..oo/....../....../oo..oo/oo..oo/....../....../....../....../....../....../oo..oo/oo..oo  rows 150..171  dy_from_slit_centre -7.2
+   phase 2: out=debris37         dmg= 40 (died  40, born   0)  record 6x22:oo..oo/oo..oo/....../....../oo..oo/oo..oo/....../....../oo..oo/oo..oo/....../....../oo..oo/oo..oo/....../....../....../....../....../....../oo..oo/oo..oo  rows 150..171  dy_from_slit_centre -7.2
+   phase 3: out=debris37         dmg= 40 (died  40, born   0)  record 6x22:oo..oo/oo..oo/....../....../....../....../....../....../oo..oo/oo..oo/....../....../oo..oo/oo..oo/....../....../oo..oo/oo..oo/....../....../oo..oo/oo..oo  rows 162..183  dy_from_slit_centre 7.2
+   -> THE FOUR PHASES DIFFER   <-- PHASE-SENSITIVE
+
+thickness 2  spacing 4  slit 164..169 (width 6)  place b=2 (flush high)  mass 64
+   phase 0: out=nothing          dmg= 12 (died  12, born   0)  record 6x10:oo..oo/oo..oo/....../....../....../....../....../....../oo..../oo....  rows 162..171  dy_from_slit_centre -1.3
+   phase 1: out=debris5          dmg=  6 (died   4, born   2)  record 4x4:.o../o.../..oo/..oo  rows 168..171  dy_from_slit_centre 3.3
+   phase 2: out=debris5          dmg=  6 (died   4, born   2)  record 4x4:.o../o.../..oo/..oo  rows 168..171  dy_from_slit_centre 3.3
+   phase 3: out=nothing          dmg= 12 (died  12, born   0)  record 6x10:oo..oo/oo..oo/....../....../....../....../....../....../oo..../oo....  rows 162..171  dy_from_slit_centre -1.3
+   -> THE FOUR PHASES DIFFER   <-- PHASE-SENSITIVE
+
+thickness 2  spacing 6  slit 170..179 (width 10)  place b=0 (flush low)  mass 64
+   phase 0: out=debris5          dmg=  6 (died   4, born   2)  record 4x4:..oo/..oo/o.../.o..  rows 168..171  dy_from_slit_centre -5.3
+   phase 1: out=debris3          dmg=  4 (died   4, born   0)  record 2x2:oo/oo  rows 168..169  dy_from_slit_centre -6.0
+   phase 2: out=debris3          dmg=  4 (died   4, born   0)  record 2x2:oo/oo  rows 168..169  dy_from_slit_centre -6.0
+   phase 3: out=debris5          dmg=  6 (died   4, born   2)  record 4x4:..oo/..oo/o.../.o..  rows 168..171  dy_from_slit_centre -5.3
+   -> THE FOUR PHASES DIFFER   <-- PHASE-SENSITIVE
+
+thickness 2  spacing 6  slit 170..179 (width 10)  place b=1 (clear)  mass 64
+   phase 0: out=nothing          dmg=  4 (died   4, born   0)  record 2x2:oo/oo  rows 168..169  dy_from_slit_centre -6.0
+   phase 1: out=debris33         dmg= 24 (died  20, born   4)  record 8x20:......oo/......oo/......../......../......../......../oo....oo/oo....oo/......../......../......../......../......../......../......../......../....oo../....oo../oo....oo/oo....oo  rows 162..181  dy_from_slit_centre -1.3
+   phase 2: out=debris33         dmg= 24 (died  20, born   4)  record 8x20:......oo/......oo/......../......../......../......../oo....oo/oo....oo/......../......../......../......../......../......../......../......../....oo../....oo../oo....oo/oo....oo  rows 162..181  dy_from_slit_centre -1.3
+   phase 3: out=nothing          dmg=  4 (died   4, born   0)  record 2x2:oo/oo  rows 168..169  dy_from_slit_centre -6.0
+   -> THE FOUR PHASES DIFFER   <-- PHASE-SENSITIVE
+
+thickness 2  spacing 6  slit 170..179 (width 10)  place b=2 (clear)  mass 64
+   phase 0: out=debris2          dmg=  8 (died   3, born   5)  record 4x4:..oo/.o.o/o..o/o..o  rows 168..171  dy_from_slit_centre -5.0
+   phase 1: out=ship(2,0)        dmg=  0 (died   0, born   0)  record -  rows -  dy_from_slit_centre -
+   phase 2: out=ship(2,0)        dmg=  0 (died   0, born   0)  record -  rows -  dy_from_slit_centre -
+   phase 3: out=debris2          dmg=  8 (died   3, born   5)  record 4x4:..oo/.o.o/o..o/o..o  rows 168..171  dy_from_slit_centre -5.0
+   -> THE FOUR PHASES DIFFER   <-- PHASE-SENSITIVE
+
+thickness 2  spacing 6  slit 170..179 (width 10)  place b=3 (clear)  mass 64
+   phase 0: out=ship(2,0)        dmg=  0 (died   0, born   0)  record -  rows -  dy_from_slit_centre -
+   phase 1: out=ship(2,0)        dmg=  0 (died   0, born   0)  record -  rows -  dy_from_slit_centre -
+   phase 2: out=ship(2,0)        dmg=  0 (died   0, born   0)  record -  rows -  dy_from_slit_centre -
+   phase 3: out=ship(2,0)        dmg=  0 (died   0, born   0)  record -  rows -  dy_from_slit_centre -
+   -> the four phases are indistinguishable
+
+thickness 2  spacing 6  slit 170..179 (width 10)  place b=4 (clear)  mass 64
+   phase 0: out=ship(2,0)        dmg=  0 (died   0, born   0)  record -  rows -  dy_from_slit_centre -
+   phase 1: out=debris2          dmg=  8 (died   3, born   5)  record 4x4:o..o/o..o/.o.o/..oo  rows 178..181  dy_from_slit_centre 5.0
+   phase 2: out=debris2          dmg=  8 (died   3, born   5)  record 4x4:o..o/o..o/.o.o/..oo  rows 178..181  dy_from_slit_centre 5.0
+   phase 3: out=ship(2,0)        dmg=  0 (died   0, born   0)  record -  rows -  dy_from_slit_centre -
+   -> THE FOUR PHASES DIFFER   <-- PHASE-SENSITIVE
+
+thickness 2  spacing 6  slit 170..179 (width 10)  place b=5 (clear)  mass 64
+   phase 0: out=debris33         dmg= 24 (died  20, born   4)  record 8x20:oo....oo/oo....oo/....oo../....oo../......../......../......../......../......../......../......../......../oo....oo/oo....oo/......../......../......../......../......oo/......oo  rows 168..187  dy_from_slit_centre 1.3
+   phase 1: out=nothing          dmg=  4 (died   4, born   0)  record 2x2:oo/oo  rows 180..181  dy_from_slit_centre 6.0
+   phase 2: out=nothing          dmg=  4 (died   4, born   0)  record 2x2:oo/oo  rows 180..181  dy_from_slit_centre 6.0
+   phase 3: out=debris33         dmg= 24 (died  20, born   4)  record 8x20:oo....oo/oo....oo/....oo../....oo../......../......../......../......../......../......../......../......../oo....oo/oo....oo/......../......../......../......../......oo/......oo  rows 168..187  dy_from_slit_centre 1.3
+   -> THE FOUR PHASES DIFFER   <-- PHASE-SENSITIVE
+
+thickness 2  spacing 6  slit 170..179 (width 10)  place b=6 (flush high)  mass 64
+   phase 0: out=debris3          dmg=  4 (died   4, born   0)  record 2x2:oo/oo  rows 180..181  dy_from_slit_centre 6.0
+   phase 1: out=debris5          dmg=  6 (died   4, born   2)  record 4x4:.o../o.../..oo/..oo  rows 178..181  dy_from_slit_centre 5.3
+   phase 2: out=debris5          dmg=  6 (died   4, born   2)  record 4x4:.o../o.../..oo/..oo  rows 178..181  dy_from_slit_centre 5.3
+   phase 3: out=debris3          dmg=  4 (died   4, born   0)  record 2x2:oo/oo  rows 180..181  dy_from_slit_centre 6.0
+   -> THE FOUR PHASES DIFFER   <-- PHASE-SENSITIVE
+
+thickness 3  spacing 4  slit 164..169 (width 6)  place b=0 (flush low)  mass 96
+   phase 0: out=debris5          dmg=  6 (died   4, born   2)  record 4x4:..oo/..oo/o.../.o..  rows 162..165  dy_from_slit_centre -3.3
+   phase 1: out=nothing          dmg= 12 (died  12, born   0)  record 6x10:oo..../oo..../....../....../....../....../....../....../oo..oo/oo..oo  rows 162..171  dy_from_slit_centre 1.3
+   phase 2: out=nothing          dmg= 12 (died  12, born   0)  record 6x10:oo..../oo..../....../....../....../....../....../....../oo..oo/oo..oo  rows 162..171  dy_from_slit_centre 1.3
+   phase 3: out=debris5          dmg=  6 (died   4, born   2)  record 4x4:..oo/..oo/o.../.o..  rows 162..165  dy_from_slit_centre -3.3
+   -> THE FOUR PHASES DIFFER   <-- PHASE-SENSITIVE
+
+thickness 3  spacing 4  slit 164..169 (width 6)  place b=1 (clear)  mass 96
+   phase 0: out=debris7          dmg= 62 (died  52, born  10)  record 12x22:..oo..oo..../..oo..oo..../............/............/............/............/....oo....../............/..oo..oo.o.o/..oo..oo.o.o/............/............/o.oo..oo..oo/o.oo..oo..oo/............/............/..oo..oo..oo/..o...oo..oo/..o.o......./..o.o......./..o...oo..oo/..oo..oo..oo  rows 162..183  dy_from_slit_centre 8.0
+   phase 1: out=debris7          dmg= 62 (died  52, born  10)  record 12x22:..oo..oo..oo/..o...oo..oo/..o.o......./..o.o......./..o...oo..oo/..oo..oo..oo/............/............/o.oo..oo..oo/o.oo..oo..oo/............/............/..oo..oo.o.o/..oo..oo.o.o/............/....oo....../............/............/............/............/..oo..oo..../..oo..oo....  rows 150..171  dy_from_slit_centre -8.0
+   phase 2: out=debris7          dmg= 62 (died  52, born  10)  record 12x22:..oo..oo..oo/..o...oo..oo/..o.o......./..o.o......./..o...oo..oo/..oo..oo..oo/............/............/o.oo..oo..oo/o.oo..oo..oo/............/............/..oo..oo.o.o/..oo..oo.o.o/............/....oo....../............/............/............/............/..oo..oo..../..oo..oo....  rows 150..171  dy_from_slit_centre -8.0
+   phase 3: out=debris7          dmg= 62 (died  52, born  10)  record 12x22:..oo..oo..../..oo..oo..../............/............/............/............/....oo....../............/..oo..oo.o.o/..oo..oo.o.o/............/............/o.oo..oo..oo/o.oo..oo..oo/............/............/..oo..oo..oo/..o...oo..oo/..o.o......./..o.o......./..o...oo..oo/..oo..oo..oo  rows 162..183  dy_from_slit_centre 8.0
+   -> THE FOUR PHASES DIFFER   <-- PHASE-SENSITIVE
+
+thickness 3  spacing 4  slit 164..169 (width 6)  place b=2 (flush high)  mass 96
+   phase 0: out=nothing          dmg= 12 (died  12, born   0)  record 6x10:oo..oo/oo..oo/....../....../....../....../....../....../oo..../oo....  rows 162..171  dy_from_slit_centre -1.3
+   phase 1: out=debris5          dmg=  6 (died   4, born   2)  record 4x4:.o../o.../..oo/..oo  rows 168..171  dy_from_slit_centre 3.3
+   phase 2: out=debris5          dmg=  6 (died   4, born   2)  record 4x4:.o../o.../..oo/..oo  rows 168..171  dy_from_slit_centre 3.3
+   phase 3: out=nothing          dmg= 12 (died  12, born   0)  record 6x10:oo..oo/oo..oo/....../....../....../....../....../....../oo..../oo....  rows 162..171  dy_from_slit_centre -1.3
+   -> THE FOUR PHASES DIFFER   <-- PHASE-SENSITIVE
+
+thickness 3  spacing 6  slit 170..179 (width 10)  place b=0 (flush low)  mass 96
+   phase 0: out=debris5          dmg=  6 (died   4, born   2)  record 4x4:..oo/..oo/o.../.o..  rows 168..171  dy_from_slit_centre -5.3
+   phase 1: out=debris3          dmg=  4 (died   4, born   0)  record 2x2:oo/oo  rows 168..169  dy_from_slit_centre -6.0
+   phase 2: out=debris3          dmg=  4 (died   4, born   0)  record 2x2:oo/oo  rows 168..169  dy_from_slit_centre -6.0
+   phase 3: out=debris5          dmg=  6 (died   4, born   2)  record 4x4:..oo/..oo/o.../.o..  rows 168..171  dy_from_slit_centre -5.3
+   -> THE FOUR PHASES DIFFER   <-- PHASE-SENSITIVE
+
+thickness 3  spacing 6  slit 170..179 (width 10)  place b=1 (clear)  mass 96
+   phase 0: out=nothing          dmg=  4 (died   4, born   0)  record 2x2:oo/oo  rows 168..169  dy_from_slit_centre -6.0
+   phase 1: out=debris5          dmg= 37 (died  23, born  14)  record 14x20:oo....oo....oo/oo....oo....oo/............../............../............../............../............../............../............../............../......o......./............../o.o...oo..oooo/.o.o..oo.o...o/.oo.......oo../............../......o......./.....o.o....../.....oo......./.......o......  rows 168..187  dy_from_slit_centre 3.0
+   phase 2: out=debris5          dmg= 37 (died  23, born  14)  record 14x20:oo....oo....oo/oo....oo....oo/............../............../............../............../............../............../............../............../......o......./............../o.o...oo..oooo/.o.o..oo.o...o/.oo.......oo../............../......o......./.....o.o....../.....oo......./.......o......  rows 168..187  dy_from_slit_centre 3.0
+   phase 3: out=nothing          dmg=  4 (died   4, born   0)  record 2x2:oo/oo  rows 168..169  dy_from_slit_centre -6.0
+   -> THE FOUR PHASES DIFFER   <-- PHASE-SENSITIVE
+
+thickness 3  spacing 6  slit 170..179 (width 10)  place b=2 (clear)  mass 96
+   phase 0: out=debris2          dmg=  8 (died   3, born   5)  record 4x4:..oo/.o.o/o..o/o..o  rows 168..171  dy_from_slit_centre -5.0
+   phase 1: out=ship(2,0)        dmg=  0 (died   0, born   0)  record -  rows -  dy_from_slit_centre -
+   phase 2: out=ship(2,0)        dmg=  0 (died   0, born   0)  record -  rows -  dy_from_slit_centre -
+   phase 3: out=debris2          dmg=  8 (died   3, born   5)  record 4x4:..oo/.o.o/o..o/o..o  rows 168..171  dy_from_slit_centre -5.0
+   -> THE FOUR PHASES DIFFER   <-- PHASE-SENSITIVE
+
+thickness 3  spacing 6  slit 170..179 (width 10)  place b=3 (clear)  mass 96
+   phase 0: out=ship(2,0)        dmg=  0 (died   0, born   0)  record -  rows -  dy_from_slit_centre -
+   phase 1: out=ship(2,0)        dmg=  0 (died   0, born   0)  record -  rows -  dy_from_slit_centre -
+   phase 2: out=ship(2,0)        dmg=  0 (died   0, born   0)  record -  rows -  dy_from_slit_centre -
+   phase 3: out=ship(2,0)        dmg=  0 (died   0, born   0)  record -  rows -  dy_from_slit_centre -
+   -> the four phases are indistinguishable
+
+thickness 3  spacing 6  slit 170..179 (width 10)  place b=4 (clear)  mass 96
+   phase 0: out=ship(2,0)        dmg=  0 (died   0, born   0)  record -  rows -  dy_from_slit_centre -
+   phase 1: out=debris2          dmg=  8 (died   3, born   5)  record 4x4:o..o/o..o/.o.o/..oo  rows 178..181  dy_from_slit_centre 5.0
+   phase 2: out=debris2          dmg=  8 (died   3, born   5)  record 4x4:o..o/o..o/.o.o/..oo  rows 178..181  dy_from_slit_centre 5.0
+   phase 3: out=ship(2,0)        dmg=  0 (died   0, born   0)  record -  rows -  dy_from_slit_centre -
+   -> THE FOUR PHASES DIFFER   <-- PHASE-SENSITIVE
+
+thickness 3  spacing 6  slit 170..179 (width 10)  place b=5 (clear)  mass 96
+   phase 0: out=debris5          dmg= 37 (died  23, born  14)  record 14x20:.......o....../.....oo......./.....o.o....../......o......./............../.oo.......oo../.o.o..oo.o...o/o.o...oo..oooo/............../......o......./............../............../............../............../............../............../............../............../oo....oo....oo/oo....oo....oo  rows 162..181  dy_from_slit_centre -3.0
+   phase 1: out=nothing          dmg=  4 (died   4, born   0)  record 2x2:oo/oo  rows 180..181  dy_from_slit_centre 6.0
+   phase 2: out=nothing          dmg=  4 (died   4, born   0)  record 2x2:oo/oo  rows 180..181  dy_from_slit_centre 6.0
+   phase 3: out=debris5          dmg= 37 (died  23, born  14)  record 14x20:.......o....../.....oo......./.....o.o....../......o......./............../.oo.......oo../.o.o..oo.o...o/o.o...oo..oooo/............../......o......./............../............../............../............../............../............../............../............../oo....oo....oo/oo....oo....oo  rows 162..181  dy_from_slit_centre -3.0
+   -> THE FOUR PHASES DIFFER   <-- PHASE-SENSITIVE
+
+thickness 3  spacing 6  slit 170..179 (width 10)  place b=6 (flush high)  mass 96
+   phase 0: out=debris3          dmg=  4 (died   4, born   0)  record 2x2:oo/oo  rows 180..181  dy_from_slit_centre 6.0
+   phase 1: out=debris5          dmg=  6 (died   4, born   2)  record 4x4:.o../o.../..oo/..oo  rows 178..181  dy_from_slit_centre 5.3
+   phase 2: out=debris5          dmg=  6 (died   4, born   2)  record 4x4:.o../o.../..oo/..oo  rows 178..181  dy_from_slit_centre 5.3
+   phase 3: out=debris3          dmg=  4 (died   4, born   0)  record 2x2:oo/oo  rows 180..181  dy_from_slit_centre 6.0
+   -> THE FOUR PHASES DIFFER   <-- PHASE-SENSITIVE
+
+=== SUMMARY ===
+geometries tested: 30
+geometries whose outcome depends on the ship's internal phase: 27
