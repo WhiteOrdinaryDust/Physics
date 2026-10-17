@@ -10,3 +10,7 @@ desktop.ini
 _worldview*.doc
 _worldview*.docx
 _worldview*.docx
+
+# 第三方受版权保护的资料（本地参考用，不进公开仓库；引用见 THOOFT_NOTES.md）
+thooft_cai.pdf
+thooft_cai.txt
