@@ -717,3 +717,12 @@ Noether 荷 + 离散子群（§18.2.3）、由 P、Q 构造的实数算子 p、q
    't Hooft + error term），可能比整章抓取更有效
 
 我建议 **3**，因为搜索能定位到具体论述，而整章抓取目前被截断。
+
+---
+
+## 附：关于 `thooft_cai.pdf` / `thooft_cai.txt`（第 127 轮处理）
+
+这两个文件**已在第 127 轮从公开仓库移除** ✗ —— 那是 **G. 't Hooft, *The Cellular Automaton
+Interpretation of Quantum Mechanics*, Fundamental Theories of Physics 185, Springer (2016)**
+（arXiv:1405.1548）的副本 ✓，**第三方受版权保护** ✓，不应随本仓库（GPL-3.0）分发 ✓。
+本地副本保留，仅作参考 ✓。本仓库对其的讨论**只做引用与评述** ✓。
