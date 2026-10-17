@@ -10,6 +10,21 @@
 
 ---
 
+## 0. 仓库
+
+- **地址**：<https://github.com/WhiteOrdinaryDust/Physics>
+- **首次上传**：第 127 轮 ✓（283 个候选文件 → **279 个**入库；`_worldview*.doc(x)` 已按隐私排除 ✓）
+- **验证方式**：从 GitHub **全新克隆**一份，抽验 7 个文件**逐字节一致** ✓；默认分支 `main` ✓
+- **推送配方**（本机已配好，见 `GitHub操作手册.md`）：
+  ```powershell
+  git -C <项目目录> add -A
+  git -C <项目目录> commit -m "说明"
+  git -C <项目目录> push origin main      # SSH over 443 已配好，一次通过
+  ```
+  `git push` 把进度写 stderr，**看输出里的 `main -> main`，不看退出码** ✓。
+
+---
+
 ## 1. 先读什么（按时间预算）
 
 | 时间 | 读什么 | 得到什么 |

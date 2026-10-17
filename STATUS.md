@@ -6241,6 +6241,44 @@ rule 110 的以太**不是随机态的吸引子**，它是**背景** ✓ ⇒ 必
 
 ---
 
+
+---
+
+## 127. 第一百二十七轮：**上传到 GitHub（`WhiteOrdinaryDust/Physics`）**
+
+**按用户要求整体上传** ✓（仓库地址 `https://github.com/WhiteOrdinaryDust/Physics` ✓，手册 `GitHub操作手册.md` ✓）。
+
+### 127.1 诊断（按手册第 1 节，不猜 ✓）
+
+| 项 | 结果 |
+|---|---|
+| `https://github.com` / `api.github.com` / `codeload` | **HTTP 000** ✗（主站被干扰 ✓）|
+| `ssh.github.com:443` | **可连** ✓ |
+| 本地代理 / 系统代理 | 无 ✓ |
+| 项目目录能否建 `.git` | **可以** ✓ |
+
+⇒ **走 SSH over 443** ✓ —— 且**本机早已配好**（上次 `tavern-native` 项目 ✓），
+`ssh -T git@github.com` 直接返回 **`Hi WhiteOrdinaryDust!`** ✓ ⇒ **无需新建密钥、无需用户去浏览器 ✓**。
+
+### 127.2 操作与验收 ✓
+
+- `git init -b main` ✓；`core.autocrlf=false` + `.gitattributes`（`* -text` ✓）⇒ **保住 20 份 LF-only 文档的字节** ✓；
+- 提交 1：**279 个文件 / 78104 行** ✓（166 js + 88 报告 + 20 md + 1 pdf + 1 py + 配置 ✓）；
+- **隐私排除** ✓：`_worldview*.doc(x)`（用户的个人写作 ✓）**未入库** ✓ 并写入 `.gitignore` ✓；
+- 提交 2：**重写 README** 为 GitHub 门面 ✓（指向 `INTEGRATION.md` ✓、更新规模与三处更正 ✓）；
+- **验收（最严格的一步 ✓）**：从 GitHub **全新克隆**到临时目录 ✓ ⇒
+  **279 个文件** ✓、**7 个抽样文件逐字节一致** ✓、默认分支 `main` ✓、2 个提交 ✓、
+  **`_worldview` 相关文件 0 个** ✓。
+
+### 127.3 两个必须告知用户的事项
+
+① **浏览器大概打不开仓库页** ✗ —— 本机 `https://github.com` 是 **000** ✅（只有 SSH-over-443 通 ✓）
+⇒ **推送没问题** ✓，但**要浏览需要热点或代理** ✓；
+② **仓库的公开/私有状态我没能确认** ✗（API 不可达 ✓）⇒ 若为**公开** ✓，
+则**整份档案（含 `SELF_AUDIT.md` 与约 40 处我自己的错）对外可见** ✓ —— 请用户自行确认 ✓。
+
+---
+
 ## 126. 第一百二十六轮：**全面整合（`INTEGRATION.md`）**
 
 **应要求做全面整合** ✓ —— 新文件 **`INTEGRATION.md`** ✓（约 190 行 ✓），
