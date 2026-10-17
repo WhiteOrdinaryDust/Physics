@@ -1,10 +1,13 @@
 # Physics —— 确定性基底能否产生量子现象学
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23430061.svg)](https://doi.org/10.5281/zenodo.23430061)
+[![License: GPL-3.0](https://img.shields.io/badge/license-GPL--3.0-blue.svg)](LICENSE)
+
 > **一句话**：这是一个**自包含、可逐字节复现**的项目，检验的是
 > **"确定性底层能否／是否会必然产生量子现象学"**。
 > **结论与全部数字见 [`INTEGRATION.md`](INTEGRATION.md)** —— 那是第一入口。
 
-**规模**：166 个可独立重跑的 node 脚本 · 88 份实测报告 · 20 份文档 · 125 轮工作。
+**规模**：166 个可独立重跑的 node 脚本 · 88 份实测报告 · 20 份文档 · 125 轮工作（入库 **278** 个文件 ✓）。
 **复现方式**：在本目录下 `node <script>.js > <report>.txt`，输出应与仓库里的报告**逐字节一致**
 （脚本全部确定性；只有一处曾用 `Math.random`，已在第 120 轮审计中发现并改掉）。
 
@@ -111,3 +114,23 @@ WORLDVIEW_REVIEW*.md  对用户世界观文档的评审
 
 **注意**：`thooft_cai.pdf` / `thooft_cai.txt`（'t Hooft 的著作）**未包含在本仓库中** ✗ ——
 那是第三方受版权保护的作品，仅在本地作参考；引用见 [`THOOFT_NOTES.md`](THOOFT_NOTES.md) ✓。
+
+---
+
+## 7. 引用
+
+若要在论文或报告里引用本工作，请用 Zenodo 的 DOI（**指向最新版**）：
+
+```bibtex
+@misc{whiteordinarydust_physics,
+  title   = {Physics: 确定性基底能否产生量子现象学},
+  author  = {WhiteOrdinaryDust},
+  year    = {2026},
+  doi     = {10.5281/zenodo.23430061},
+  url     = {https://doi.org/10.5281/zenodo.23430061},
+  note    = {GPL-3.0; 166 scripts, 88 reports, 20 documents}
+}
+```
+
+文本引用：WhiteOrdinaryDust, *Physics: 确定性基底能否产生量子现象学*, Zenodo,
+<https://doi.org/10.5281/zenodo.23430061> ✓
